@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 RUN apk add --no-cache dnscrypt-proxy drill && \
-    sed -i "s#listen_addresses =.*#listen_addresses = ['0.0.0.0:5053', '[::/0]:5053']#g" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+    sed -i "s#listen_addresses =.*#listen_addresses = ['0.0.0.0:5053']#g" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
 USER dnscrypt
 
